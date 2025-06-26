@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>MpGetSubscriptionPlanAlternative</label>
+    <namedCredentialReference>MercadoPago_Preapproval_Plan_Alternative</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>mpx20getx20subscriptionx20plan</name>
+    </operations>
+    <registrationProviderType>SchemaInferred</registrationProviderType>
+    <schema>{&quot;openapi&quot;:&quot;3.0.1&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;MpGetSubscriptionPlan&quot;,&quot;description&quot;:&quot;&quot;},&quot;paths&quot;:{&quot;/{id}&quot;:{&quot;get&quot;:{&quot;description&quot;:&quot;&quot;,&quot;operationId&quot;:&quot;MP Get Subscription Plan&quot;,&quot;parameters&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;in&quot;:&quot;path&quot;,&quot;description&quot;:&quot;Subscription Plan Id&quot;,&quot;required&quot;:true,&quot;allowEmptyValue&quot;:false,&quot;schema&quot;:{&quot;type&quot;:&quot;string&quot;}}],&quot;responses&quot;:{&quot;2XX&quot;:{&quot;description&quot;:&quot;&quot;,&quot;content&quot;:{&quot;application/json&quot;:{&quot;schema&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;init_point&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;reason&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;payment_methods_allowed&quot;:{&quot;type&quot;:&quot;object&quot;},&quot;date_created&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;back_url&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;collector_id&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int64&quot;},&quot;external_reference&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;id&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;application_id&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int64&quot;},&quot;last_modified&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;auto_recurring&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;transaction_amount&quot;:{&quot;type&quot;:&quot;number&quot;,&quot;format&quot;:&quot;double&quot;},&quot;frequency_type&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;currency_id&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;repetitions&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int64&quot;},&quot;frequency&quot;:{&quot;type&quot;:&quot;integer&quot;,&quot;format&quot;:&quot;int64&quot;}}},&quot;status&quot;:{&quot;type&quot;:&quot;string&quot;}}}}}}}}}}}</schema>
+    <schemaType>OpenApi3</schemaType>
+    <serviceBinding>{&quot;host&quot;:&quot;&quot;,&quot;basePath&quot;:&quot;/&quot;,&quot;allowedSchemes&quot;:[],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>5</systemVersion>
+</ExternalServiceRegistration>

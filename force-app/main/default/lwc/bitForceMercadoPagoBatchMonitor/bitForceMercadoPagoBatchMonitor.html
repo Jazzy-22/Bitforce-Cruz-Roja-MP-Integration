@@ -1,0 +1,63 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+        <h2 id="element-with-table-label" class="slds-text-heading_medium slds-m-bottom_xx-small">Monitoreo de iteraciones para ejecuciones batch</h2>
+        <h3 id="other-element-with-table-label" class="slds-text-title slds-m-bottom_small">
+            Ultima actualización de la lista: {lastUpdate}
+        </h3>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered"
+            aria-labelledby="element-with-table-label other-element-with-table-label">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="#"></div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="MP Payment Id">MP Payment Id</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="SF Payment">SF Payment</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Endpoint">Endpoint</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Status">Status</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Status Details">Status Details</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Created Date">Created Date</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={records} for:item="record" for:index="idx">
+                    <tr key={record.Id} class="slds-hint-parent">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="#">{idx}</div>
+                        </th>
+                        <td data-label="MP Payment Id">
+                            <div class="slds-truncate" title={record.MP_Payment_Id__c}>{record.data.MP_Payment_Id__c}</div>
+                        </td>
+                        <td data-label="SF Payment">
+                            <div class="slds-truncate slds-text-link" style="cursor: pointer;" title={record.Payment__c} onclick={record.openPayment}>{record.paymentName}</div>
+                        </td>
+                        <td data-label="Endpoint">
+                            <div class="slds-truncate" title={record.Endpoint__c}>{record.data.Endpoint__c}</div>
+                        </td>
+                        <td data-label="Status">
+                            <div class="slds-truncate" title={record.Status__c}>{record.data.Status__c}</div>
+                        </td>
+                        <td data-label="Status Details">
+                            <div class="slds-truncate" title={record.Status_Details__c}>{record.data.Status_Details__c}</div>
+                        </td>
+                        <td data-label="Created Date">
+                            <div class="slds-truncate" title={record.CreatedDate}>{record.data.CreatedDate}</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>
